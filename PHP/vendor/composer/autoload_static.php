@@ -19,6 +19,10 @@ class ComposerStaticInit35bde1ccf2bc23fc9d622c613bccd03a
         array (
             'Webmozart\\Assert\\' => 17,
         ),
+        'K' => 
+        array (
+            'Katas\\' => 6,
+        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
@@ -36,6 +40,10 @@ class ComposerStaticInit35bde1ccf2bc23fc9d622c613bccd03a
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Katas\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
