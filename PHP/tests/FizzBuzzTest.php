@@ -22,6 +22,21 @@ class FizzBuzzTest extends TestCase
      * @test
      * @group fase1
      * @group fase2
+     * @dataProvider data_numbers
+     */
+    public function return_number_when_havent_condicional($number)
+    {
+        $fizzBuzz = new FizzBuzz;
+        $this->assertSame(
+            $number,
+            $fizzBuzz->number($number)
+        );
+    }
+
+    /**
+     * @test
+     * @group fase1
+     * @group fase2
      * @dataProvider data_divisible_number_three
      */
     public function when_number_is_divisible_to_3($number)
@@ -141,6 +156,13 @@ class FizzBuzzTest extends TestCase
         );
     }
 
+    public function data_numbers()
+    {
+        return [
+            "Others numbers" => [1], [2], [7], [11], [19], 
+        ];
+    }
+
     public function data_divisible_number_three()
     {
         return [
@@ -158,7 +180,7 @@ class FizzBuzzTest extends TestCase
     public function data_divisible_number_and_three_five()
     {
         return [
-            "Divisible Five" => [60], [90]
+            "Divisible Three and Five" => [60], [90]
         ];
     }
 
@@ -172,28 +194,28 @@ class FizzBuzzTest extends TestCase
     public function data_number_contains_5()
     {
         return [
-            "Contains three" => [52], [54], [56]
+            "Contains five" => [52], [54], [56]
         ];
     }
 
     public function data_number_contains_3_and_5()
     {
         return [
-            "Contains three" => [35], [53]
+            "Contains three and five" => [35], [53]
         ];
     }
 
     public function data_number_divisible_3_and_contains_5()
     {
         return [
-            "Contains three" => [15], [51]
+            "Divisible three and contains five" => [15], [51]
         ];
     }
 
     public function data_number_divisible_5_and_contains_3()
     {
         return [
-            "Contains three" => [30]
+            "Divisible five and contains three" => [30]
         ];
     }
 }
